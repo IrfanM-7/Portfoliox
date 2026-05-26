@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#13284f"/>
+  <rect x="200" y="150" width="400" height="250" rx="10" fill="#0f1f3d" stroke="#0052cc" stroke-width="4"/>
+  <polygon points="360,210 360,330 460,270" fill="#0052cc" />
+  <rect x="200" y="430" width="400" height="20" rx="10" fill="#0f1f3d" />
+  <rect x="250" y="430" width="60" height="20" rx="10" fill="#0052cc" />
+  <rect x="350" y="430" width="40" height="20" rx="10" fill="#fcd34d" />
+  <rect x="450" y="430" width="80" height="20" rx="10" fill="#e1306c" />
+  <text x="400" y="520" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#ffffff" text-anchor="middle">Automated Video Highlights</text>
+  <text x="400" y="560" font-family="Arial, sans-serif" font-size="20" fill="#8fa4c7" text-anchor="middle">AI-Powered Classification</text>
+</svg>
