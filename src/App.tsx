@@ -410,7 +410,7 @@ const App: React.FC = () => {
                 </div>
               </div>
               <div className="download-btn-container">
-                <a href="/Resume_Irfan.pdf" download="Resume_Syed_Irfan.pdf" className="download-cv-btn">
+                <a href="/IrfanResume.pdf" download="Resume_Syed_Irfan.pdf" className="download-cv-btn">
                   <FaDownload style={{ marginRight: '10px' }} /> Download My CV
                 </a>
               </div>
