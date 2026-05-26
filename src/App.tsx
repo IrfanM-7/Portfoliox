@@ -248,6 +248,7 @@ const App: React.FC = () => {
   };
 
   useEffect(() => {
+    const isMobile = window.innerWidth <= 1024;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -256,7 +257,7 @@ const App: React.FC = () => {
           }
         });
       },
-      { root: rightScrollRef.current, threshold: 0.3 }
+      { root: isMobile ? null : rightScrollRef.current, threshold: 0.3 }
     );
 
     const sections = document.querySelectorAll('[data-section]');
@@ -268,37 +269,54 @@ const App: React.FC = () => {
   }, []);
 
   useEffect(() => {
-    if (!rightScrollRef.current) return;
-
     const scrollContainer = rightScrollRef.current;
     const handleScroll = () => {
       const scrollBtn = document.querySelector('.scroll-to-top') as HTMLElement | null;
       if (!scrollBtn) return;
-      if (scrollContainer.scrollTop > 320) {
+      
+      const isMobile = window.innerWidth <= 1024;
+      const scrollTop = isMobile ? window.scrollY : (scrollContainer?.scrollTop || 0);
+
+      if (scrollTop > 320) {
         scrollBtn.classList.add('visible');
       } else {
         scrollBtn.classList.remove('visible');
       }
     };
 
-    scrollContainer.addEventListener('scroll', handleScroll);
-    return () => scrollContainer.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll);
+    }
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('scroll', handleScroll);
+      }
+    };
   }, []);
 
   const scrollToSection = (sectionId: string) => {
-    if (!rightScrollRef.current) return;
     const section = document.getElementById(sectionId);
     if (!section) return;
 
-    const containerRect = rightScrollRef.current.getBoundingClientRect();
-    const sectionRect = section.getBoundingClientRect();
-    const offset = sectionRect.top - containerRect.top + rightScrollRef.current.scrollTop;
-
-    rightScrollRef.current.scrollTo({ top: offset, behavior: 'smooth' });
+    if (window.innerWidth <= 1024) {
+      const offset = section.getBoundingClientRect().top + window.scrollY;
+      window.scrollTo({ top: offset, behavior: 'smooth' });
+    } else {
+      if (!rightScrollRef.current) return;
+      const containerRect = rightScrollRef.current.getBoundingClientRect();
+      const sectionRect = section.getBoundingClientRect();
+      const offset = sectionRect.top - containerRect.top + rightScrollRef.current.scrollTop;
+      rightScrollRef.current.scrollTo({ top: offset, behavior: 'smooth' });
+    }
   };
 
   const scrollToTop = () => {
-    if (rightScrollRef.current) {
+    if (window.innerWidth <= 1024) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else if (rightScrollRef.current) {
       rightScrollRef.current.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
