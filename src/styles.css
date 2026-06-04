@@ -423,8 +423,8 @@ body {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
 }
 
 /* ASYMMETRICAL EGG PILL SQUIRCLES */
@@ -438,28 +438,29 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 24px;
+  padding: 16px;
   transition: all 0.3s ease;
   cursor: pointer;
 }
 
 .skill-icon {
   color: var(--primary-blue);
-  font-size: 40px;
-  margin-bottom: 12px;
+  font-size: 30px;
+  margin-bottom: 8px;
   transition: all 0.3s ease;
 }
 
 .skill-name {
   font-family: 'Jost', sans-serif;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-dark);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+  text-align: center;
 }
 
 .skill-level {
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--light-text);
 }
@@ -1175,12 +1176,25 @@ body {
   }
   
   .skill-bubble {
-    padding: 16px;
+    padding: 10px;
+  }
+  
+  .skill-bubble .skill-icon {
+    font-size: 24px;
+    margin-bottom: 4px;
+  }
+  
+  .skill-bubble .skill-name {
+    font-size: 11px;
+  }
+  
+  .skill-bubble .skill-level {
+    font-size: 10px;
   }
   
   .skills-grid {
-    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 10px;
   }
   
   .project-content {
