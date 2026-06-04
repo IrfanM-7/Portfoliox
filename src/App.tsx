@@ -136,8 +136,9 @@ const App: React.FC = () => {
       id: 1,
       title: 'Sign Language To Text Converter',
       description: 'Real-time sign language recognition using MediaPipe and Random Forest classifier with 94%+ accuracy.',
-      tags: ['Python', 'MediaPipe', 'Machine Learning', 'Computer Vision'],
+      tags: ['Python', 'OpenCV', 'MediaPipe', 'Machine Learning'],
       image: '/sign_language_project.png',
+      link: 'https://github.com/IrfanM-7/Sign-Language-To-Text-Converter',
     },
     {
       id: 2,
@@ -145,6 +146,7 @@ const App: React.FC = () => {
       description: 'CNN-LSTM based cybersecurity intrusion detection system using NSL-KDD dataset.',
       tags: ['Python', 'TensorFlow', 'CNN-LSTM', 'Security'],
       image: '/nids_project.png',
+      link: 'https://github.com/IrfanM-7/Network-Intrusion-Detection-System-NIDS',
     },
     {
       id: 3,
@@ -152,6 +154,7 @@ const App: React.FC = () => {
       description: 'Tamil AI communication ecosystem integrating chatbot, voicebot, Whisper ASR and NLP complaint classification.',
       tags: ['Python', 'NLP', 'Whisper ASR', 'AI', 'Chatbot'],
       image: '/nagarvaani_project.png',
+      link: 'https://github.com/IrfanM-7/NagarVaani',
     },
     {
       id: 4,
@@ -159,6 +162,7 @@ const App: React.FC = () => {
       description: 'Agricultural supply chain platform using React and Firebase for real-time intelligent matching.',
       tags: ['React', 'Firebase', 'Supply Chain', 'Real-time'],
       image: '/agriconnect_project.png',
+      link: 'https://github.com/IrfanM-7/AgriConnect',
     },
     {
       id: 5,
@@ -543,7 +547,7 @@ const App: React.FC = () => {
                       </div>
                       {project.link && (
                         <a href={project.link} target="_blank" rel="noreferrer" className="project-link-btn">
-                          View on GitHub <FaExternalLinkAlt style={{ marginLeft: '6px', fontSize: '12px' }} />
+                          <FaGithub style={{ marginRight: '8px', fontSize: '18px' }} /> View on GitHub
                         </a>
                       )}
                     </div>
