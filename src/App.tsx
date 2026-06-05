@@ -386,6 +386,11 @@ const App: React.FC = () => {
       <div className="right-scroll" ref={rightScrollRef}>
         <main className="right-panel">
           <section id="home" data-section className="section hero-section">
+            <div className="mobile-section-header">
+              <span className="left-greeting">👋 Hello</span>
+              <p className="left-small-italic">I'm Syed Irfan</p>
+              <h1 className="left-name-large">AI & ML<br />Engineer</h1>
+            </div>
             <div className="section-wrapper hero-wrapper">
               <div className="hero-layout">
                 <div className="hero-left">
@@ -422,6 +427,10 @@ const App: React.FC = () => {
           </section>
 
           <section id="education" data-section className="section education-section">
+            <div className="mobile-section-header">
+              <span className="left-small-italic">Education</span>
+              <h1 className="left-name-large">My Academic<br />Journey</h1>
+            </div>
             <div className="section-wrapper">
               <h2 className="section-title">Education</h2>
               <div className="education-cards">
@@ -447,6 +456,10 @@ const App: React.FC = () => {
           </section>
 
           <section id="services" data-section className="section services-section">
+            <div className="mobile-section-header">
+              <span className="left-small-italic">My Services</span>
+              <h1 className="left-name-large">What I do for<br />you</h1>
+            </div>
             <div className="section-wrapper">
               <div className="services-list">
                 <div className="service-row">
@@ -496,6 +509,10 @@ const App: React.FC = () => {
           </section>
 
           <section id="skills" data-section className="section skills-section">
+            <div className="mobile-section-header">
+              <span className="left-small-italic">Skills</span>
+              <h1 className="left-name-large">What I bring<br />to the table</h1>
+            </div>
             <div className="section-wrapper">
               <div className="skills-tabs">
                 {[
@@ -529,6 +546,10 @@ const App: React.FC = () => {
           </section>
 
           <section id="projects" data-section className="section projects-section">
+            <div className="mobile-section-header">
+              <span className="left-small-italic">Projects</span>
+              <h1 className="left-name-large">My Creative<br />Works</h1>
+            </div>
             <div className="section-wrapper">
               <h2 className="section-title">Projects</h2>
               <div className="projects-grid">
@@ -568,6 +589,10 @@ const App: React.FC = () => {
           </section>
 
           <section id="contact" data-section className="section contact-section">
+            <div className="mobile-section-header">
+              <span className="left-small-italic">Contact Me</span>
+              <h1 className="left-name-large">Let's Start A<br />New Project</h1>
+            </div>
             <div className="section-wrapper">
               <h2 className="section-title">Contact</h2>
               <div className="contact-layout">
