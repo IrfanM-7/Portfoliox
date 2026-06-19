@@ -400,7 +400,7 @@ const App: React.FC = () => {
                 </div>
                 <div className="hero-copy">
                   <h1 className="hero-main-title">AI & ML Engineer | Deep Learning Specialist | Building Intelligent Systems</h1>
-                  <p className="hero-description">Passionate AI & ML Engineer with expertise in building intelligent systems, deep learning, computer vision, and NLP pipelines. Holding a B.Tech CSE (AIML) from SRM Institute of Science and Technology, I focus on delivering scalable, production-ready AI models and clean software architectures.</p>
+                  <p className="hero-description">Passionate AI & ML Engineer with expertise in building intelligent systems, deep learning, computer vision, and NLP pipelines. Currently a Final Year B.Tech CSE (AIML) student at SRM Institute of Science and Technology, I focus on delivering scalable, production-ready AI models and clean software architectures.</p>
 
                   <div className="hero-contact-list">
                     <p><FaMapMarkerAlt /> Tiruchirappalli, Tamil Nadu, India</p>
