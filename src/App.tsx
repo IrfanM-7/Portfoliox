@@ -203,7 +203,7 @@ const App: React.FC = () => {
       school: 'SRM Institute of Science and Technology',
       degree: 'B.Tech CSE (AIML)',
       period: '2023 – 2027',
-      cgpa: '8.00',
+      cgpa: '8.14',
       details: ['Specialization in AI & Machine Learning', 'Relevant Coursework: Deep Learning, NLP, Computer Vision'],
     },
   ];
